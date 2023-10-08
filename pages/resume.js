@@ -21,7 +21,7 @@ const Question = () => {
         e.preventDefault()
 
         try {
-            const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY
+            const apiKey = `${process.env.NEXT_PUBLIC_OPEN_AI_KEY}`
             const response = await axios.post(
                 "https://api.openai.com/v1/engines/text-davinci-002/completions",
                 {
@@ -36,6 +36,7 @@ const Question = () => {
                 }
             )
 
+            console.log(response.data.choices)
             setResponse(response.data.choices[0].text)
         } catch (error) {
             console.error("Error:", error)
