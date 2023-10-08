@@ -21,7 +21,7 @@ const Question = () => {
         e.preventDefault()
 
         try {
-            const apiKey = "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"
+            const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY
             const response = await axios.post(
                 "https://api.openai.com/v1/engines/text-davinci-002/completions",
                 {
