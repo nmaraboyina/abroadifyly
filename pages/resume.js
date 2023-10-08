@@ -68,11 +68,11 @@ const Question = () => {
                         </button>
                     </div>
                     {response && (
-                        <div className="w-1/2 pl-2 mx-5 bg-violet-300">
-                            <h2 className="text-2xl text-violet-950">
+                        <div className="w-1/2  mx-5 bg-violet-300 px-5 py-3">
+                            <h2 className="text-2xl text-violet-950 font-heading">
                                 Response:
                             </h2>
-                            <p className="text-violet-700">{response}</p>
+                            <p className="text-violet-900 font-heading">{response}</p>
                         </div>
                     )}
                 </div>
